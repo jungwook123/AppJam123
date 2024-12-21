@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        //SceneManager.sceneLoaded += Init;
+        SceneManager.sceneLoaded += Init;
     }
     
     void OnDisable()
