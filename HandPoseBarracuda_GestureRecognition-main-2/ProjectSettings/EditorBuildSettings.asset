@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Stage5.unity
     guid: 7f03fc99c68ccfb4cb38d2ff9ab40aaa
+  - enabled: 1
+    path: Assets/Stage1.unity
+    guid: 00eea770f72983f4cbb3296e141b6c69
   m_configObjects: {}
