@@ -1,13 +1,57 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using DG.Tweening;
 
-public class StartButton : MonoBehaviour
+public class MySceneManager : MonoBehaviour
 {
-    public void LoadNextScene()
+    public static MySceneManager Instance;
+
+    [SerializeField] private Image fadeImage;
+    [SerializeField] private float fadeDuration = 1f;
+
+    private void Awake()
     {
-        // 현재 씬의 다음 씬을 로드
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex + 1); // 다음 씬으로 이동
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        if (fadeImage != null)
+        {
+            fadeImage.gameObject.SetActive(true);
+            fadeImage.color = Color.black;
+            FadeIn();
+        }
+    }
+
+    public void ChangeScene(string sceneName)
+    {
+        print("1");
+        if (fadeImage != null)
+        {
+            fadeImage.DOFade(1f, fadeDuration).OnComplete(() =>
+            {
+                SceneManager.LoadScene(sceneName);
+                FadeIn();
+            });
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+    }
+
+    private void FadeIn()
+    {
+        if (fadeImage != null)
+        {
+            fadeImage.DOFade(0f, fadeDuration).SetDelay(0.1f);
+        }
     }
 }
-
