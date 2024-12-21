@@ -91,6 +91,11 @@ namespace MediaPipe.HandPose
             for (int i = 0; i < pointVector.Count / 2; i++)
             {
                 Debug.Log("X[" + i + "]: " + pointVector[i * 2] + "  Y[" + i + "]: " + pointVector[i * 2 + 1] + "\n");
+                if (float.IsNaN(pointVector[i * 2]) && float.IsNaN(pointVector[i * 2 + 1]))
+                {
+                    targetText.text = "No solution";
+                }
+                
             }
 
 
