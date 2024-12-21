@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CarMovement : MonoBehaviour
 {
@@ -8,6 +10,10 @@ public class CarMovement : MonoBehaviour
     private float speed;
     [SerializeField]
     private float rotateAngle;
+
+    [SerializeField]
+    private Text moveDir;
+    
 
     void Start()
     {
@@ -17,11 +23,11 @@ public class CarMovement : MonoBehaviour
     void Update()
     {
         Move();
-        if(Input.GetKey(KeyCode.A))
+        if(moveDir.text == "왼쪽 돌기")
         {
             Rotate(1f);
         }
-        else if(Input.GetKey(KeyCode.D))
+        else if(moveDir.text == "오른쪽 돌기")
         {
             Rotate(-1f);
         }
@@ -29,9 +35,9 @@ public class CarMovement : MonoBehaviour
 
     void Move()
     {
-        if(Input.GetKey(KeyCode.W))
+        if(moveDir.text == "움직임")
         {
-            transform.position += transform.up * speed * Time.deltaTime;
+            transform.position += transform.right * speed * Time.deltaTime;
         }
         else if(Input.GetKey(KeyCode.S))
         {
@@ -43,4 +49,8 @@ public class CarMovement : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(0, 0, transform.eulerAngles.z + dir * rotateAngle * Time.deltaTime);
     }
+
+    
+
+    
 }
