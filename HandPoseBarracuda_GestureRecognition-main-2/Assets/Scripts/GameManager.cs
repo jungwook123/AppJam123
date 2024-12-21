@@ -60,6 +60,11 @@ public class GameManager : MonoBehaviour
             StartCoroutine("GameClear");
             
         }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            MySceneManager.Instance.ChangeScene("Stage5");
+        }
     }
 
     public void Init(Scene scene, LoadSceneMode mode)
