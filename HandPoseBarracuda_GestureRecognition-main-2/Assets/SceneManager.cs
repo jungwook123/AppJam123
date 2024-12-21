@@ -15,7 +15,7 @@ public class MySceneManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -32,7 +32,6 @@ public class MySceneManager : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
-        print("1");
         if (fadeImage != null)
         {
             fadeImage.DOFade(1f, fadeDuration).OnComplete(() =>

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4139247121406351702}
   - component: {fileID: 4244899928345266744}
   - component: {fileID: 2713353352398018804}
+  - component: {fileID: -3606817588114208734}
   m_Layer: 0
   m_Name: SUV
   m_TagString: Untagged
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3115601, y: 0.49869448}
   m_EdgeRadius: 0
+--- !u!114 &-3606817588114208734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4341573096522932196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26dc24bf590b6184e999eb061c7240a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

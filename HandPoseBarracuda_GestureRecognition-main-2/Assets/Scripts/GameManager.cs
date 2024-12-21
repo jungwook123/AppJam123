@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        SceneManager.sceneLoaded += Init;
+        //SceneManager.sceneLoaded += Init;
     }
     
     void OnDisable()
@@ -45,15 +45,20 @@ public class GameManager : MonoBehaviour
     {
         if(isTimeOver)
         {
+            isTimeOver = false;
             TimeOverUI.SetActive(true);
+            
         }
         if(isGameOver)
         {
+            isGameOver = false;
             GameOverUI.SetActive(true);
         }
         if(isGameClear)
         {
-            GameClearUI.SetActive(true);
+            isGameClear = false;
+            StartCoroutine("GameClear");
+            
         }
     }
 
@@ -64,6 +69,12 @@ public class GameManager : MonoBehaviour
         isGameClear = false;
         TimeOverUI.SetActive(false);
         GameOverUI.SetActive(false);
+        GameClearUI.SetActive(false);
+    }
+
+    IEnumerator GameClear()
+    {
+        yield return new WaitForSeconds(1f);
         GameClearUI.SetActive(false);
     }
 }

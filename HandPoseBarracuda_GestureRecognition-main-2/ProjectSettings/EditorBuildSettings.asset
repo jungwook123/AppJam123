@@ -9,11 +9,30 @@ EditorBuildSettings:
     path: Assets/TestVisualizer.unity
     guid: 16e2f07633259412a9eae42088d3972d
   - enabled: 1
+    path: Assets/Start.unity
+    guid: c12f719dc616aa6479e77c0138624b98
+  - enabled: 1
     path: Assets/TestAnimator.unity
     guid: 49aaa2374d47645399fa8837f75a0a47
   - enabled: 1
-
-    path: Assets/CarTestScene.unity
-    guid: 723b47bd54453c44ea2ea558ce810feb
-
+    path: Assets/Stage.unity
+    guid: 6777fbc4af3f21e44b49b19a0338d88e
+  - enabled: 1
+    path: Assets/Tutorial.unity
+    guid: f185c82a1a3254545ba1e9ed67d23516
+  - enabled: 1
+    path: Assets/Stage2.unity
+    guid: 206282d6c7deb244c9852104e9396ddd
+  - enabled: 1
+    path: Assets/Stage3.unity
+    guid: 7a3b3eba0c620d341b6bedbcfb542559
+  - enabled: 1
+    path: Assets/Stage4.unity
+    guid: b92ce80c0d928434e9c967e68972ea96
+  - enabled: 1
+    path: Assets/Stage5.unity
+    guid: 7f03fc99c68ccfb4cb38d2ff9ab40aaa
+  - enabled: 1
+    path: Assets/Stage1.unity
+    guid: 00eea770f72983f4cbb3296e141b6c69
   m_configObjects: {}
