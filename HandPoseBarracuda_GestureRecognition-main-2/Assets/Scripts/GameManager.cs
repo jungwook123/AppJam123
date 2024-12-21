@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour
         if(isGameOver)
         {
             GameOverUI.SetActive(true);
-            MySceneManager.Instance.ChangeScene("Stage");
             isGameOver = false;
         }
         if(isGameClear)
