@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace MediaPipe.HandPose {
 
-public sealed class HandAnimator : MonoBehaviour
+public sealed class HandAnimator : Singleton<HandAnimator>
 {
     #region Editable attributes
 

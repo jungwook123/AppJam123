@@ -38,7 +38,7 @@ public class CarMovement : MonoBehaviour
     {
         if(moveDir.text == "움직임")
         {
-            transform.position += transform.right * speed * Time.deltaTime;
+            transform.position += transform.up * speed * Time.deltaTime;
         }
         else if(Input.GetKey(KeyCode.S))
         {
