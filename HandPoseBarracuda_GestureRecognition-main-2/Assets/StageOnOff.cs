@@ -26,5 +26,10 @@ public class StageOnOff : MonoBehaviour
     {
         MySceneManager.Instance.ChangeScene(sceneName);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
     
 }

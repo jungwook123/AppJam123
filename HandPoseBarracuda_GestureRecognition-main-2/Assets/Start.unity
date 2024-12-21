@@ -289,6 +289,7 @@ GameObject:
   - component: {fileID: 477086451}
   - component: {fileID: 477086450}
   - component: {fileID: 477086449}
+  - component: {fileID: 477086452}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -370,6 +371,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &477086452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477086448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a2067b432ea9499f803260ce902dcf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &730592490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,6 +1029,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1791288488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1791288490}
+  - component: {fileID: 1791288489}
+  m_Layer: 0
+  m_Name: ButtonSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1791288489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791288488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f2d7689ec8c47bf8f3b3e4fca520be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1791288490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791288488}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 805.15295, y: 621.13446, z: -1.6388811}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2089595715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1286,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmSource: {fileID: 2100655294}
-  bgmClip: {fileID: 8300000, guid: 2043d6dcfc587bb469e770fe5e079f0f, type: 3}
+  sfxSource: {fileID: 2100655294}
+  bgmClips:
+  - {fileID: 8300000, guid: 2043d6dcfc587bb469e770fe5e079f0f, type: 3}
+  - {fileID: 8300000, guid: f3cb868151c8747fbbe95f138ce1700e, type: 3}
+  clickSound: {fileID: 8300000, guid: 3d5f6b915bcfc4580b397caa7a8e72ea, type: 3}
+  gameOverSound: {fileID: 8300000, guid: 1b9bc17e194204481b6fb0887d782756, type: 3}
 --- !u!82 &2100655294
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1335,3 +1397,4 @@ SceneRoots:
   - {fileID: 175269976}
   - {fileID: 1729820499}
   - {fileID: 2100655292}
+  - {fileID: 1791288490}
