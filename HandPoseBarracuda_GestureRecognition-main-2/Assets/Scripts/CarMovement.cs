@@ -4,12 +4,14 @@ using System.Net.Mime;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CarMovement : MonoBehaviour
+public class CarMovement : MonoBehaviour, IContact
 {
     [SerializeField]
-    private float speed;
+    private float speed = 5;
     [SerializeField]
-    private float rotateAngle;
+    private float rotateAngle = 50;
+    [SerializeField]
+    private GameObject GameOverUI;
 
     [SerializeField]
     private Text moveDir;
@@ -17,7 +19,7 @@ public class CarMovement : MonoBehaviour
 
     void Start()
     {
-        
+        GameOverUI.SetActive(false);
     }
 
     void Update()
@@ -50,7 +52,9 @@ public class CarMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, transform.eulerAngles.z + dir * rotateAngle * Time.deltaTime);
     }
 
-    
+    public void Contact()
+    {
+        GameOverUI.SetActive(true);
+    }
 
-    
 }
