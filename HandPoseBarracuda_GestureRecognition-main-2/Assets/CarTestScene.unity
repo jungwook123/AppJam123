@@ -159,6 +159,7 @@ MonoBehaviour:
   _boneMesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
   _jointMaterial: {fileID: 2100000, guid: bb02f7161ea1a4d6a85beb5b7749894d, type: 2}
   _boneMaterial: {fileID: 2100000, guid: 639c7a175a7bf4296b211c6afc02329c, type: 2}
+  _monitorUI: {fileID: 0}
   BallColor: {fileID: 2100000, guid: 34c123ae930560b4393654e015c6ecb1, type: 2}
 --- !u!114 &349046034
 MonoBehaviour:
