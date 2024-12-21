@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SequenceScene.unity
     guid: 12c77a7d1ecd0472e8ff880f27484618
+  - enabled: 1
+    path: Assets/SequenceScene 1.unity
+    guid: 70ddf0a25299146f3a75562743cafa56
   m_configObjects: {}

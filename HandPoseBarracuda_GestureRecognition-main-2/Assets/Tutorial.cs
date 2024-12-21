@@ -8,9 +8,9 @@ public class Tutorial : MonoBehaviour
     private Transform firstCanvas;
     [SerializeField]
     private Transform secondCanvas;
-    public void ChangeScene()
+    public void ChangeScene(string scene)
     {
-        MySceneManager.Instance.ChangeScene("Start");
+        MySceneManager.Instance.ChangeScene(scene);
     }
 
     public void ChangeScreen()

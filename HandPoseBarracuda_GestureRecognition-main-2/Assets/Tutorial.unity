@@ -156,8 +156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 709, y: -449}
-  m_SizeDelta: {x: -1760, y: -1050}
+  m_AnchoredPosition: {x: 665.61646, y: -449}
+  m_SizeDelta: {x: -1728.9474, y: -1050}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159878237
 MonoBehaviour:
@@ -192,7 +192,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB098\uAC00\uAE30"
+  m_Text: "\uC2DC\uC791\uD574\uBCFC\uAE4C\uC694?"
 --- !u!222 &159878238
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -462,15 +462,15 @@ RectTransform:
   m_GameObject: {fileID: 596775957}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.7942, y: 2.7942, z: 2.7942}
+  m_LocalScale: {x: 3.248537, y: 2.7942, z: 2.7942}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026794357}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 709, y: -449}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 688.7544, y: -449}
+  m_SizeDelta: {x: 172.4645, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &596775959
 MonoBehaviour:
@@ -519,13 +519,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1231803689}
         m_TargetAssemblyTypeName: Tutorial, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: SequenceScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &596775960

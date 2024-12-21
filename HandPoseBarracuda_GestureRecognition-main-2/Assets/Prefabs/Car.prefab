@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b042536c00a94489e58c64b72ddb03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  rotateAngle: 50
+  speed: 1
+  rotateAngle: 40
   moveDir: {fileID: 0}
 --- !u!61 &8857017223283321235
 BoxCollider2D:

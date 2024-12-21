@@ -1521,7 +1521,7 @@ PrefabInstance:
       objectReference: {fileID: 433486315}
     - target: {fileID: 4608444807314479533, guid: 53c55b71a275e0946bd00a592fe4d278, type: 3}
       propertyPath: rotateAngle
-      value: 35
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6363467173026341387, guid: 53c55b71a275e0946bd00a592fe4d278, type: 3}
       propertyPath: m_LocalScale.x
@@ -3101,6 +3101,10 @@ PrefabInstance:
     - target: {fileID: 6809322256308047188, guid: a0e1eb21867089e4a8213dd0d14eed69, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005598944749721786, guid: a0e1eb21867089e4a8213dd0d14eed69, type: 3}
+      propertyPath: text
+      value: Stage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
