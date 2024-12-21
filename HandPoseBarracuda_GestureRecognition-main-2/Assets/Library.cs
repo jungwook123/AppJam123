@@ -4,12 +4,12 @@
     {
         var synset = new string[]
         {
-            "Pause",
-            "Crescendo",
-            "Finish",
-            "Shake",
-            "Diminuendo",
-            "Point"
+            "일시정지",
+            "점점세게",
+            "멈춰",
+            "흔들림",
+            "여러개",
+            "가르킴"
         };
 
         return synset;
