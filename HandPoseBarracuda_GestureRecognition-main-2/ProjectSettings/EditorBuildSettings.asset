@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TestAnimator.unity
     guid: 49aaa2374d47645399fa8837f75a0a47
+  - enabled: 1
+    path: Assets/CarTestScene.unity
+    guid: 723b47bd54453c44ea2ea558ce810feb
   m_configObjects: {}

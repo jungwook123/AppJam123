@@ -2,22 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarMovement : MonoBehaviour, IContact
+public class CarMovement : MonoBehaviour
 {
     [SerializeField]
     private float speed = 5;
     [SerializeField]
     private float rotateAngle = 50;
-    [SerializeField]
-    private GameObject GameOverUI;
 
     void Start()
     {
-        GameOverUI.SetActive(false);
     }
 
     void Update()
     {
+        if(GameManager.Instance.isGameClear || GameManager.Instance.isGameOver || GameManager.Instance.isTimeOver) return;
+
         Move();
         if(Input.GetKey(KeyCode.A))
         {
@@ -46,8 +45,14 @@ public class CarMovement : MonoBehaviour, IContact
         transform.rotation = Quaternion.Euler(0, 0, transform.eulerAngles.z + dir * rotateAngle * Time.deltaTime);
     }
 
-    public void Contact()
+
+    void OnCollisionEnter2D(Collision2D coll) 
     {
-        GameOverUI.SetActive(true);
+        IContact contact = coll.gameObject.GetComponent<IContact>();
+
+        if(contact != null)
+        {
+            contact.Contact();
+        }
     }
 }
