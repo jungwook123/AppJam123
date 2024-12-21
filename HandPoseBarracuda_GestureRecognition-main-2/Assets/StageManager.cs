@@ -5,39 +5,59 @@ using UnityEngine.UI;
 
 public class StageManager : MonoBehaviour
 {
-    public Text[] stages;
     public Button[] buttons;
-    int curStage = 1;
+    public int curStage = 1;
 
     private void Start()
     {
-        for (int i = 0; i < stages.Length; i++)
+        SetButtonName();
+        SetButtonOpacity();
+    }
+
+    public void SetButtonName()
+    {
+        for (int i = 0; i < buttons.Length; i++)
         {
-            // Set stage text based on stage index (you could change this to match your need)
-            stages[i].text = "Stage " + (i + 1);
+            Text buttonText = buttons[i].GetComponentInChildren<Text>();
+
+            buttonText.text = (i + 1).ToString();
         }
     }
 
-    public void SetButtonOpacity(float alpha)
+    public void SetButtonOpacity()
     {
-        // Loop through all the buttons
         for (int i = 0; i < buttons.Length; i++)
         {
             Image buttonImage = buttons[i].GetComponent<Image>();
 
-            // Check if the current button is within the active stages
+            Color color = buttonImage.color;
             if (i < curStage)
             {
-                Color color = buttonImage.color;
-                color.a = alpha;  // Set desired alpha value
+                buttons[i].interactable = true;
+                color.a = 1.0f;
                 buttonImage.color = color;
             }
             else
             {
-                // Set opacity to 0 for disabled buttons or any other logic
-                Color color = buttonImage.color;
                 color.a = 0.2f;
-                buttonImage.color = color;
+                buttons[i].interactable = false;
+            }
+
+            Text buttonText = buttons[i].GetComponentInChildren<Text>();
+            if (buttonText != null)
+            {
+                Color textColor = buttonText.color;
+
+                if (i < curStage)
+                {
+                    textColor.a = 1.0f;
+                }
+                else
+                {
+                    textColor.a = 0.2f;
+                }
+
+                buttonText.color = textColor;
             }
         }
     }
