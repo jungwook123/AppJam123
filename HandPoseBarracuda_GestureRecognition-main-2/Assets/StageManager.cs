@@ -7,7 +7,13 @@ public class StageManager : MonoBehaviour
 {
     public Button[] buttons;
     public int curStage = 1;
+    
+    private static StageManager instance;
 
+    public StageManager Instance
+    {
+        get{return instance;}
+    }
     private void Start()
     {
         SetButtonName();
