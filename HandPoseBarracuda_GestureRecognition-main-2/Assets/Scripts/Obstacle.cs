@@ -2,15 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+public class Obstacle : MonoBehaviour, IContact
 {
-    void OnCollisionEnter2D(Collision2D coll) 
-    {
-        IContact contact = coll.gameObject.GetComponent<IContact>();
 
-        if(contact != null)
-        {
-            contact.Contact();
-        }
+    
+    public void Contact()
+    {
+        GameManager.Instance.isGameOver = true;
     }
 }
