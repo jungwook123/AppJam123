@@ -18,8 +18,7 @@ public sealed class HandAnimator : MonoBehaviour
     [SerializeField] Material _jointMaterial = null;
     [SerializeField] Material _boneMaterial = null;
     [Space]
-    [SerializeField] RawImage _monitorUI = null;
-
+    
     #endregion
 
     #region Private members
@@ -133,7 +132,7 @@ public sealed class HandAnimator : MonoBehaviour
         }
 
         // UI update
-        _monitorUI.texture = _webcam.Texture;
+       
     }
 
     #endregion
